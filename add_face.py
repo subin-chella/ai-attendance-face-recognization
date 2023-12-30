@@ -15,7 +15,7 @@ while True:
     for (x, y, w, h) in faces:
         crop_image = frame[y:y+h, x:x+h, :]
         resize_image = cv2.resize(crop_image, (50,50))
-        if len(faces_data) <=100: and i%10==0:
+        if len(faces_data) <=100 and i%10==0:
             faces_data.append(resize_image)
         i = i+1
         cv2.putText(frame, str(len(faces_data)), (50,50), cv2.FONT_HERSHEY_COMPLEX, 1,(50,50,255), 1 )    
